@@ -1,0 +1,14 @@
+name: Notify on Swift Release
+
+on:
+  release:
+    types:
+      - published
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Notification
+        run: |
+          echo "There is a new Swift release! Please review the documentation for updates."
